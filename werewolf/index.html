@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>
+    The Werewolf game By Mrthomas20121
+  </title>
+  <!-- including bootstrap and stuff -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://bootswatch.com/3/paper/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="assets/werewolf.js"></script>
+    <style>
+    body {
+      background-color:#999;
+    }
+    .output span {
+      display: inline-block;
+      padding: 5px;
+      margin: 5px;
+      width: 150px;
+      height: 100px;
+      text-align: center;
+  }
+  .dropdown-menu > li > a:hover {
+    color : #FFFFFF;
+    background-color:#2196f3;
+  }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#role">Role Giver</a></li>
+        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Role<span class="caret"></a>
+          <ul class="dropdown-menu">
+            <li><a href="#werewolf">Werewolf</a></li>
+            <li><a href="#hunter">Hunter</a></li>
+            <li><a href="#witch">Witch</a></li>
+            <li><a href="#healer">Healer</a></li>
+            <li><a href="#oracle">Oracle</a></li>
+            <li><a href="#amor">Amor</a></li>
+            <li><a href="#spy">Spy</a></li>
+            <li><a href="#wolf">Lone Wolf</a></li>
+            <li><a href="#villager">Villager</a></li>
+          </ul>
+        </li>
+      </ul>
+</nav>
+<div id="about" class="panel panel-info">
+<div class="panel-heading">
+<h2 class="panel-title">About</h2>
+</div>
+<div class="panel-body">
+<p>Website Developement by <a href="http://www.mrthomas20121.esy.es" target="_blank">Mrthomas20121</a></p>
+<p>Idea by Keyboard warrior and <a href="https://www.youtube.com/channel/UCW51H5oV8QliScFsbANvbug">Grabi</a></p>
+</div>
+</div>
+
+    <div id="role" class="panel panel-success">
+  <div class="panel-heading">
+    <h2 class="panel-title">Generator</h2>
+  </div>
+  <div class="panel-body">
+    <div id="players" class="form-group">
+      <input type="text" id="nbPlayer" placeholder="number of player"/>
+    </div>
+    <div class="form-group">
+
+    <button class="btn btn-success" id="btn" onclick="addInput()">Add Players inputs</button>
+    <button class="btn btn-info" id="btn" onclick="del()">Clear Players inputs</button>
+    </div>
+    <button class="btn btn-danger" id="btn" onclick="getRandomString()">Generate random role</button>
+    <div class="output" id="output">
+    </div>
+    <div class="" id="input">
+
+    </div>
+  </div>
+</div>
+
+<div id="howtoplay" class="panel panel-danger">
+<div class="panel-heading">
+<h2 class="panel-title">Role Information</h2>
+</div>
+<div class="panel-body">
+<h3 id="werewolf">Werewolf</h3>
+  <p>Every night they pick one person to kill. If they cannot decide in time they will not kill anyone</p>
+<h3 id="hunter">Hunter</h3>
+  <p>If he's about to die he can kill someone else</p>
+<h3 id="witch">Witch</h3>
+  <p>The witch knows who was killed by the werewolf, if she has her healing potion that is. </p>
+  <p>In that case she may heal the wounded person to save their life. </p>
+  <p>She also has a killing potion, allowing her to kill any person during nighttime.</p>
+  <p>Important to note: She may heal herself in advance to get an additional life.</p>
+<h3 id="healer">Healer</h3>
+  <p>The Healer gets to heal 1 person every night. </p>
+  <p>However, unlike the witch, he/she has no idea who was attacked. </p>
+<p>The Healer may only heal him/herself once and may not heal the same person twice in a row.</p>
+<h3 id="oracle">Oracle</h3>
+  <p>At the start of the night the oracle gets to choose one person and i will tell the oracle their role.</p>
+<h3 id="amor">amor</h3>
+  <p>In the first night the Amor gets to choose two people.</p>
+  <p> Those two players will fall in love and instantly start teaming up, no matter their roles. </p>
+  <p>The couple can only win if <p>
+<p>1) Both of the lovers are from the town:</p>
+<p>Every werewolf and the town has to die</p>
+<p>2) One of the lovers is a Werewolf:</p>
+<p>The entire town has to die</p>
+<p>3) Both lovers are Werewolves:</p>
+<p>The entire town and the Werewolves have to die.</p>
+<h3 id="spy">Spy</h3>
+  <p>The spy gets to pretend to be a werewolf and joins their chat.</p>
+  <p>He gets to vote on the person who gets killed and his vote does count.</p>
+    <p>However, as usual he may not reveal any roles, he may not hint at any roles and - most importantly - If the werewolves find out who he is, he dies Instantly. </p>
+    <p>Not even the Witch/Healer can save him. Said death does not count as the killed person for the werewolves, meaning they may kill an additional person.</p>
+<h3 id="wolf">Lone Wolf</h3>
+  <p>The lone wolf only wins if he is the last remaining werewolf. </p>
+  <p>He may not kill any of his fellow werewolves at night, but he may accuse them during daytime.</p>
+<h3 id="villager">Villager</h3>
+  <p>The villager have nothing special.</p>
+    </div>
+  </div>
+
+</div>
+</body>
