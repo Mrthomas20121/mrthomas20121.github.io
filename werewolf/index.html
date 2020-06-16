@@ -7,43 +7,49 @@
   <!-- including bootstrap and stuff -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://bootswatch.com/3/paper/bootstrap.css">
+  <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="assets/werewolf.js"></script>
-    <style>
-    body {
-      background-color:#999;
-    }
-    .output span {
-      display: inline-block;
-      padding: 5px;
-      margin: 5px;
-      width: 150px;
-      height: 100px;
-      text-align: center;
+  <script type="text/javascript" src="assets/werewolf.js"></script>
+  <style>
+  .output span {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+    height: 100px;
+    text-align: center;
   }
   .dropdown-menu > li > a:hover {
     color : #FFFFFF;
     background-color:#2196f3;
   }
-    </style>
+  .jumbotron.bg-dark > h2, .jumbotron.bg-dark > p {
+    color:#FFFFFF;
+  }
+  </style>
 </head>
 <body>
   <div class="container">
-    <div id="about" class="panel panel-info">
-      <div class="panel-heading">
-        <h2 class="panel-title">About</h2>
+    <div id="about" class="jumbotron">
+      <h2 class="display-3">Werewolf</h2>
+      <p class="lead">Page created by Mrthomas20121 using ideas from Keyboard warrior(LichKing#3929) and Fandiril(Fandiril#0420)</p>
+    </div>
+    <div id="howtoplay" class="card text-white bg-primary mb-3">
+      <div class="card-header">
+        <h2 class="card-title">How to play?</h2>
       </div>
-      <div class="panel-body">
-        <p>Page created by Mrthomas20121 using ideas from Keyboard warrior(LichKing#3929) and Fandiril(Fandiril#0420)</p>
+      <div class="card-body">
+        <p>You start the game with a role(random) and your goal is to survive.</p> 
+        <p>During daytime you can choose someone to lynch or vote a mayor.</p>
+        <p>At night everyone is asleep. when a user role activate, they awake and do something.</p>
       </div>
     </div>
     <!-- Roles Informations -->
-    <div id="howtoplay" class="panel panel-danger">
-      <div class="panel-heading">
-        <h2 class="panel-title">Role Information</h2>
+    <div id="howtoplay" class="card text-white bg-primary mb-3">
+      <div class="card-header">
+        <h2 class="card-title">Roles</h2>
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <h3 id="werewolf">Werewolf</h3>
         <p>Every night they pick one person to kill. If they cannot decide in time they will not kill anyone</p>
         <h3 id="hunter">Hunter</h3>
