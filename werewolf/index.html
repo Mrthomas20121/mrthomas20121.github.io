@@ -5,86 +5,67 @@
     Werewolf the town! roles info
   </title>
   <!-- including bootstrap and stuff -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://bootswatch.com/4/spacelab/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <script type="text/javascript" src="assets/werewolf.js"></script>
-  <style>
-  .output span {
-    display: inline-block;
-    padding: 5px;
-    margin: 5px;
-    width: 150px;
-    height: 100px;
-    text-align: center;
-  }
-  .dropdown-menu > li > a:hover {
-    color : #FFFFFF;
-    background-color:#2196f3;
-  }
-  .jumbotron.bg-dark > h2, .jumbotron.bg-dark > p {
-    color:#FFFFFF;
-  }
-  </style>
 </head>
-<body>
-  <div class="container">
+<body class="bg-dark">
+  <div class="container bg-dark text-white">
     <div id="about" class="jumbotron">
       <h2 class="display-3">Werewolf</h2>
       <p class="lead">Page created by Mrthomas20121 using ideas from Keyboard warrior(LichKing#3929) and Fandiril(Fandiril#0420)</p>
     </div>
-    <div id="howtoplay" class="card text-white bg-primary mb-3">
-      <div class="card-header">
-        <h2 class="card-title">How to play?</h2>
-      </div>
+    <div class="card bg-secondary text-white">
       <div class="card-body">
-        <p>You start the game with a role(random) and your goal is to survive.</p> 
-        <p>During daytime you can choose someone to lynch or vote a mayor.</p>
-        <p>At night everyone is asleep. when a user role activate, they awake and do something.</p>
+        <h2 class="card-title">How to play?</h2>
+        <p class="card-text">You start the game with a role(random) and your goal is to survive.</p> 
+        <p class="card-text">During daytime you can choose someone to lynch or vote a mayor.</p>
+        <p class="card-text">At night everyone is asleep. when a user role activate, they awake and do something.</p>
       </div>
     </div>
+  </br>
     <!-- Roles Informations -->
-    <div id="howtoplay" class="card text-white bg-primary mb-3">
+    <div class="card bg-secondary text-white">
       <div class="card-header">
         <h2 class="card-title">Roles</h2>
       </div>
       <div class="card-body">
-        <h3 id="werewolf">Werewolf</h3>
-        <p>Every night they pick one person to kill. If they cannot decide in time they will not kill anyone</p>
-        <h3 id="hunter">Hunter</h3>
-        <p>If he's about to die he can kill someone else</p>
-        <h3 id="witch">Witch</h3>
-        <p>The witch knows who was killed by the werewolf, if she has her healing potion that is. </p>
-        <p>In that case she may heal the wounded person to save their life. </p>
-        <p>She also has a killing potion, allowing her to kill any person during nighttime.</p>
-        <p>Important to note: She may heal herself in advance to get an additional life.</p>
-        <h3 id="healer">Healer</h3>
-        <p>The Healer gets to heal 1 person every night. </p>
-        <p>However, unlike the witch, he/she has no idea who was attacked. </p>
-        <p>The Healer may only heal him/herself once and may not heal the same person twice in a row.</p>
-        <h3 id="oracle">Oracle</h3>
-        <p>At the start of the night the oracle gets to choose one person and i will tell the oracle their role.</p>
-        <h3 id="amor">amor</h3>
-        <p>In the first night the Amor gets to choose two people.</p>
-        <p> Those two players will fall in love and instantly start teaming up, no matter their roles. </p>
-        <p>The couple can only win if <p>
-        <p>1) Both of the lovers are from the town:</p>
-        <p>Every werewolf and the town has to die</p>
-        <p>2) One of the lovers is a Werewolf:</p>
-        <p>The entire town has to die</p>
-        <p>3) Both lovers are Werewolves:</p>
-        <p>The entire town and the Werewolves have to die.</p>
-        <h3 id="spy">Spy</h3>
-        <p>The spy gets to pretend to be a werewolf and joins their chat.</p>
-        <p>He gets to vote on the person who gets killed and his vote does count.</p>
-        <p>However, as usual he may not reveal any roles, he may not hint at any roles and - most importantly - If the werewolves find out who he is, he dies Instantly. </p>
-        <p>Not even the Witch/Healer can save him. Said death does not count as the killed person for the werewolves, meaning they may kill an additional person.</p>
-        <h3 id="wolf">Lone Wolf</h3>
-        <p>The lone wolf only wins if he is the last remaining werewolf. </p>
-        <p>He may not kill any of his fellow werewolves at night, but he may accuse them during daytime.</p>
-        <h3 id="villager">Villager</h3>
-        <p>The villager have nothing special.</p>
+        <h3 class="card-text">Werewolf</h3>
+        <p class="card-text">Every night they pick one person to kill. If they cannot decide in time they will not kill anyone</p>
+        <h3 class="card-text" id="hunter">Hunter</h3>
+        <p class="card-text">If he's about to die he can kill someone else</p>
+        <h3 class="card-text" id="witch">Witch</h3>
+        <p class="card-text">The witch knows who was killed by the werewolf, if she has her healing potion that is. </p>
+        <p class="card-text">In that case she may heal the wounded person to save their life. </p>
+        <p class="card-text">She also has a killing potion, allowing her to kill any person during nighttime.</p>
+        <p class="card-text">Important to note: She may heal herself in advance to get an additional life.</p>
+        <h3 class="card-text" id="healer">Healer</h3>
+        <p class="card-text">The Healer gets to heal 1 person every night. </p>
+        <p class="card-text">However, unlike the witch, he/she has no idea who was attacked. </p>
+        <p class="card-text">The Healer may only heal him/herself once and may not heal the same person twice in a row.</p>
+        <h3 class="card-text" id="oracle">Oracle</h3>
+        <p class="card-text">At the start of the night the oracle gets to choose one person and i will tell the oracle their role.</p>
+        <h3 class="card-text" id="amor">amor</h3>
+        <p class="card-text">In the first night the Amor gets to choose two people.</p>
+        <p class="card-text"> Those two players will fall in love and instantly start teaming up, no matter their roles. </p>
+        <p class="card-text">The couple can only win if <p class="card-text">
+        <p class="card-text">1) Both of the lovers are from the town:</p>
+        <p class="card-text">Every werewolf and the town has to die</p>
+        <p class="card-text">2) One of the lovers is a Werewolf:</p>
+        <p class="card-text">The entire town has to die</p>
+        <p class="card-text">3) Both lovers are Werewolves:</p>
+        <p class="card-text">The entire town and the Werewolves have to die.</p>
+        <h3 class="card-text" id="spy">Spy</h3>
+        <p class="card-text">The spy gets to pretend to be a werewolf and joins their chat.</p>
+        <p class="card-text">He gets to vote on the person who gets killed and his vote does count.</p>
+        <p class="card-text">However, as usual he may not reveal any roles, he may not hint at any roles and - most importantly - If the werewolves find out who he is, he dies Instantly. </p>
+        <p class="card-text">Not even the Witch/Healer can save him. Said death does not count as the killed person for the werewolves, meaning they may kill an additional person.</p>
+        <h3 class="card-text" id="wolf">Lone Wolf</h3>
+        <p class="card-text">The lone wolf only wins if he is the last remaining werewolf. </p>
+        <p class="card-text">He may not kill any of his fellow werewolves at night, but he may accuse them during daytime.</p>
+        <h3 class="card-text" id="villager">Villager</h3>
+        <p class="card-text">The villager have nothing special.</p>
       </div>
     </div>
   </div>
