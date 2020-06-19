@@ -25,6 +25,37 @@ let alloys = {
   'tough' : 'ferroboron.40.60,lithium.40.60',
 }
 
-function getMetal(alloys, metal) {
+function getAlloy(metal) {
   return alloys[metal]
+}
+
+class Alloy 
+{
+  /**
+   * Create a alloy
+   * @param {String} name 
+   * @param {String} values 
+   */
+  constructor(name, values)
+  {
+    this.name=name;
+    this.props=values;
+  }
+  /**
+   * split alloy values with a seperator
+   * @param {String} seperator 
+   */
+  splitValues(seperator)
+  {
+    return this.props.split(seperator)
+  }
+  /**
+   * 
+   * @param {any[]} array 
+   * @param {String} seperator 
+   */
+  static splitArray(array, seperator)
+  {
+    return array.split(seperator)
+  }
 }
