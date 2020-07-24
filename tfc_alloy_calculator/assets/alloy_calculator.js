@@ -1,4 +1,23 @@
-let alloys = {
+let metals = {
+  'copper':new MetalTFC('copper'),
+  'tin':new MetalTFC('tin'),
+  'gold':new MetalTFC('gold'),
+  'silver':new MetalTFC('silver'),
+  'nickel':new MetalTFC('nickel'),
+  'zinc':new MetalTFC('zinc'),
+  'platinum':new MetalTFC('platinum'),
+  'bismuth':new MetalTFC('bismuth'),
+  'bismuth_bronze':new MetalTFC('bismuth_bronze'),
+  'bronze':new MetalTFC('bronze'),
+  'black_bronze':new MetalTFC('black_bronze'),
+  
+}
+
+let bronze = MetalTFC.emptyMap();
+bronze.set(metals.copper, 88.92);
+bronze.set(metals.tin, 8.12);
+
+let a = {
   'bismuth_bronze' : 'copper.50.65,zinc.20.30,bismuth.10.20',
   'black_bronze' : 'copper.50.70,silver.10.25,gold.10.25',
   'bronze' : 'copper.88.92,tin.8.12',
@@ -29,17 +48,53 @@ function getAlloy(metal) {
   return alloys[metal]
 }
 
+class MetalTFC
+{
+  /**
+   * 
+   * @param {String} name 
+   * @param {Number} color 
+   */
+  constructor(name, color=000000)
+  {
+    this.name = name;
+    this.color = color;
+  }
+  /**
+   * @returns {Map<MetalTFC, String>}
+   */
+  static emptyMap()
+  {
+    return new Map();
+  }
+}
+
 class Alloy 
 {
   /**
    * Create a alloy
    * @param {String} name 
-   * @param {String} values 
+   * @param {Map<MetalTFC,String>} values
    */
   constructor(name, values)
   {
     this.name=name;
     this.props=values;
+  }
+  /**
+   * get a metal proportion
+   * @param {String} metal 
+   */
+  getValue(metal)
+  {
+    return this.props.get(metal);
+  }
+  /**
+   * get values
+   */
+  getValues()
+  {
+    return this.props.values();
   }
   /**
    * split alloy values with a seperator

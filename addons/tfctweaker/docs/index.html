@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>TFCTweaker Docs</title>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="../../../assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+  </head>
+  <body class="bg-dark text-white">
+    <div class="container">
+      <h2>Documentation for TFC Tweaker:</h2>
+      <p>TFCTweaker add a Crafttweaker Bracket for TFC Metals</p>
+      <code language="zs" id="zs">
+      </code>
+      <p>Brackets Properties:</p>
+      <table class="table table-hover table-primary">
+        <thead>
+          <tr>
+            <th scope="col">Property</th>
+            <th scope="col">Type</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>name</td>
+            <td>String</td>
+            <td>The Metal name(e.g copper)</td>
+          </tr>
+          <tr>
+            <td>tier</td>
+            <td>int</td>
+            <td>The Metal tier</td>
+          </tr>
+          <tr>
+            <td>hasTool</td>
+            <td>boolean</td>
+            <td>true if the metal have tools</td>
+          </tr>
+          <tr>
+            <td>hasArmor</td>
+            <td>boolean</td>
+            <td>true if the metal have armor</td>
+          </tr>
+          <tr>
+            <td>color</td>
+            <td>int</td>
+            <td>Color of the metal</td>
+          </tr>
+          <tr>
+            <td>metlTemp</td>
+            <td>float</td>
+            <td>Melting Temperature of the metal</td>
+          </tr>
+          <tr>
+            <td>heat</td>
+            <td>float</td>
+            <td>The Metal Heat</td>
+          </tr>
+        </tbody>
+      </table>
+      <script>
+        var zs = document.getElementById("zs");
+        zs.innerText = "Bracket:\n<tfcmetal:metalName>"
+      </script>
+    </div>
+    <script src="./assets/alloy_calculator.js"></script>
+  </body>
+</html>
