@@ -1,4 +1,4 @@
-function generateLang()
+function generate(metal, tier, tools)
 {
     let metal_types = [
         'ingot',
@@ -48,11 +48,6 @@ function generateLang()
         'boots'
     ]
 
-    let output = document.getElementById('output')
-    let metal = document.getElementById('metalName').value
-    let tier = document.getElementById('tier').value
-    let tools = document.getElementById('tools').value
-
     let lang = ''
 
     lang = lang + `# metals \ntfc.types.metal.${metal}=${Capitalize(metal)}`
@@ -65,7 +60,7 @@ function generateLang()
         lang = lang + `\nitem.tfc.metal.${metalType}.${metal}.name=${Capitalize(metal)} ${metalType}`
     }
 
-    if(tools == '1')
+    if(tools == true)
     {
         lang = lang + `\nitem.tfc.metal.anvil.${metal}.name=${Capitalize(metal)} Anvil`
         lang = lang + `\nitem.tfc.metal.tuyere.${metal}.name=${Capitalize(metal)} Tuyere`
@@ -97,7 +92,7 @@ function generateLang()
         lang = lang + `item.tfc.bloom.refined.${metal}.name=Refined ${metal} Bloom`
     }
 
-    output.innerHTML = lang;
+    return lang;
 }
 
 function Capitalize(metal)
@@ -116,3 +111,4 @@ function Capitalize(metal)
 		return metal[0].toUpperCase() + metal.substring(1)
 	}
 }
+
