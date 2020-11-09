@@ -10,7 +10,6 @@ let metals = {
   'bismuth_bronze':new MetalTFC('bismuth_bronze'),
   'bronze':new MetalTFC('bronze'),
   'black_bronze':new MetalTFC('black_bronze'),
-  
 }
 
 let bronze = MetalTFC.emptyMap();

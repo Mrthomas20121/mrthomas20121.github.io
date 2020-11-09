@@ -7,62 +7,24 @@
   </head>
   <body class="bg-dark text-white">
     <div class="container">
-      <h2>Documentation for TFC Tweaker:</h2>
-      <p>TFCTweaker add a Crafttweaker Bracket for TFC Metals</p>
-      <p language="zs" id="zs">
-      </p>
-      <p>Brackets Properties:</p>
-      <table class="table table-hover table-primary">
-        <thead>
-          <tr>
-            <th scope="col">Property</th>
-            <th scope="col">Type</th>
-            <th scope="col">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>name</td>
-            <td>String</td>
-            <td>The Metal name(e.g copper)</td>
-          </tr>
-          <tr>
-            <td>tier</td>
-            <td>int</td>
-            <td>The Metal tier</td>
-          </tr>
-          <tr>
-            <td>hasTool</td>
-            <td>boolean</td>
-            <td>true if the metal have tools</td>
-          </tr>
-          <tr>
-            <td>hasArmor</td>
-            <td>boolean</td>
-            <td>true if the metal have armor</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>int</td>
-            <td>Color of the metal</td>
-          </tr>
-          <tr>
-            <td>metlTemp</td>
-            <td>float</td>
-            <td>Melting Temperature of the metal</td>
-          </tr>
-          <tr>
-            <td>heat</td>
-            <td>float</td>
-            <td>The Metal Heat</td>
-          </tr>
-        </tbody>
-      </table>
-      <script>
-        var zs = document.getElementById("zs");
-        zs.innerText = "Bracket:\n<tfcmetal:metalName>"
-      </script>
-    </div>
-    <script src="./assets/alloy_calculator.js"></script>
+      <h1>TFCTweaker Documentations</h1>
+	  
+	  <h1 id="fluid"><a href="#fluid">Fluids:</a></h1>
+      <h2>Import:</h2>
+	  <pre><code>import mods.tfctweaker.fluids;</code></pre>
+	  <h2>Use:</h2>
+	  <pre><code>fluids.makeDrinkable(ILiquidStack liquid,float thirst);</code></pre>
+	  </br>
+	  <pre><code>fluids.makeDrinkable(ILiquidStack liquid,float thirst, String potion, int duration, int level);</code></pre>
+	  <h2>Examples:</h2>
+	  <pre><code id="ex1">fluids.makeDrinkable(liquid_, -100);</code></pre>
+	  <br/>
+	  <pre><code id="ex2">fluids.makeDrinkable(liquid_, 5, "minecraft:resistance", 100, 1);</code></pre>
+	  <script>
+		let ex1 = document.getElementById('ex1')
+		let ex2 = document.getElementById('ex2')
+		ex1.innerHTML = ex1.innerHTML.replace("liquid_", '\<liquid:lava\>')
+		ex2.innerHTML = ex2.innerHTML.replace("liquid_", '\<liquid:milk\>')
+	  </script>
   </body>
 </html>
