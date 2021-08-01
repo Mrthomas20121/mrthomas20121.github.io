@@ -63,10 +63,10 @@ var getRandomString = function () {
     break;
     }
 
-      for (i = role.length, i>-1; i--; ) {
-            var random =role.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
-            document.getElementById('output').innerHTML+='<span><b>' + player[i] + "</b>:\n " + random + '</span>';
-      }
+    for (i = role.length, i>-1; i--; ) {
+          var random =role.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
+          document.getElementById('output').innerHTML+='<span><b>' + player[i] + "</b>:\n " + random + '</span>';
+    }
   }
   var addInput = function () {
     $('.input').empty();
