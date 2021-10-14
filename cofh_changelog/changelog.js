@@ -88,4 +88,4 @@ async function setChangelog() {
     getChangelog('thermal')
 }
 
-await setChangelog()
+setChangelog()
