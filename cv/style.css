@@ -1,0 +1,8 @@
+.underline {
+    text-decoration: underline;
+}
+
+.styled {
+    text-decoration: underline;
+    font-weight: bold;
+}
