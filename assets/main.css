@@ -1,0 +1,24 @@
+div.main {
+    --sz: 12px;
+    --c0: #fff0;
+    --c1: #00607a;
+    --c2: #004052;
+    --c3: #00303d;
+    --ts: 50%/ calc(var(--sz) * 24) calc(var(--sz) * 12);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: 
+        conic-gradient(from 90deg at 75% 0%, var(--c3) 0 45deg, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from 0deg at 75% 50%, var(--c1) 0 135deg, var(--c3) 0 50%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from 0deg at 50% 50%, var(--c1) 0 25%, var(--c2) 0 50%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from 90deg at 25% 50%, var(--c0) 0 45deg, var(--c1) 0 50%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from 90deg at 25% 0%, var(--c1) 0 45deg, var(--c3) 0 25%, var(--c0) 0 100%) var(--ts),
+        conic-gradient(from 180deg at 25% 50%, var(--c1) 0 25%,  var(--c2) 0 50%, var(--c0) 0 100%) var(--ts),
+            var(--c1);
+}
+
+.container {
+    background-color: rgba(51, 51, 51, 0.7);
+}
